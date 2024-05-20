@@ -4,12 +4,12 @@ using RoleplayGame.Items;
 namespace RoleplayGame.Characters
 {
     /// <summary>
-    /// DarkKnight es un enemigo que puede atacar con un cuchillo.
+    /// DarkKnight es un enemigo que puede atacar con una espada.
     /// </summary>
     public class DarkKnight : Enemy
     {
         /// <summary>
-        /// Cuchillo del personaje.
+        /// Espada del personaje.
         /// </summary>
         public Sword Sword { get; set; }
 
@@ -39,9 +39,9 @@ namespace RoleplayGame.Characters
         }
 
         /// <summary>
-        /// Método constructor de Chucky´s.
+        /// Método constructor de DarkKnight´s.
         /// </summary>
-        /// <param name="name">Nombre de Chucky.</param>
+        /// <param name="name">Nombre de DarkKnight.</param>
         /// 
         public DarkKnight(string name) : base(name)
         {

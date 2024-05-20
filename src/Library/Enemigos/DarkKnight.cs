@@ -17,6 +17,12 @@ namespace RoleplayGame.Characters
         /// Obtiene un valor que indica el ataque total del personaje a través de su arma y/o bonificación.
         /// </summary>
         /// <value>Ataque del personaje.</value>
+        public Shield Shield { get; set; }
+
+        /// <summary>
+        /// Obtiene un valor que indica el ataque total del personaje a través de su arma y/o bonificación.
+        /// </summary>
+        /// <value>Ataque del arma.</value>
         public override int AttackValue
         {
             get

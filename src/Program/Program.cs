@@ -1,7 +1,7 @@
 ﻿
 using RoleplayGame.Characters;
 using RoleplayGame.Items;
-using RoleplayGame.Utils;
+
 
 namespace Program
 {
@@ -42,7 +42,7 @@ namespace Program
             chucky.Knife = new Knife();
 
             // Equipando armaduras a los enemigos.
-            racoon.Helmet = new Helmet();
+            necromancer.skeletons = new Skeletons();
             darkKnight.Shield = new Shield();
 
             // Preparación del encuentro.

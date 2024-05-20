@@ -34,7 +34,7 @@ namespace RoleplayGame.Characters
         {
             get
             {
-                return 5;
+                return 10;
             }
         }
 

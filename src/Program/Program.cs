@@ -1,31 +1,38 @@
-﻿using System;
-using RoleplayGame;
+﻿
+using RoleplayGame.Characters;
+using RoleplayGame.Items;
+
 
 namespace Program
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            SpellsBook book = new SpellsBook();
-            book.AddSpell(new SpellOne());
-            book.AddSpell(new SpellOne());
+            // Héroes.
+            Dwarf enano = new Dwarf("Gimli");
+            Wizard mago = new Wizard("Sauron");
+            Archer arquero = new Archer("Robin Hood");
+            Knight caballero = new Knight("Merlín");
 
-            Wizard gandalf = new Wizard("Gandalf");
-            gandalf.AddItem(book);
+            
+            // Equipando armas a los héroes.
+            enano.AttackItem = new Axe();
+            SpellsBook libro = new SpellsBook();
+            libro.Spells = new Spell[] { new Spell(), new Spell(), new Spell() };
+            mago.MagicalAttackItem = libro;
+            arquero.Bow = new Bow();
+            caballero.Sword = new Sword();
 
-            Dwarf gimli = new Dwarf("Gimli");
+            // Equipando armaduras a los héroes.
+            enano.DefenseItem = new Helmet();
+            mago.MagicalDefenseItem = new Staff();
+            arquero.DefenseItem = new Armor();
+            caballero.DefenseItem = new Shield();
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-            Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
+           
 
-            gimli.ReceiveAttack(gandalf.AttackValue);
-
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-
-            gimli.Cure();
-
-            Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+           
         }
     }
 }

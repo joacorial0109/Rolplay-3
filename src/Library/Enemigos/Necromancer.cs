@@ -5,11 +5,14 @@ namespace RoleplayGame.Characters
 {
 
     public class Necromancer : Enemy
-{
+{   
+    /// <summary>
+        /// Esqueletos del personaje.
+        /// </summary>
     public Skeletons skeletons { get; set; }
 
         /// <summary>  
-        /// Obtiene un valor que indica el ataque total del personaje a través de su arma y/o bonificación.
+        /// Obtiene un valor que indica el ataque total del personaje a través de su arma(esqueletos) y/o bonificación.
         /// </summary>
         /// <value>Ataque del personaje.</value>
         public override int AttackValue
@@ -20,13 +23,19 @@ namespace RoleplayGame.Characters
                 return skeletons.AttackValue + 15;
             }
         }
+        /// <summary>
+        /// Obtiene un valor que indica la defensa total del personaje a través de su ítem defensivo y/o bonificación.
+        /// </summary>
+        /// <value>Defensa del personaje.</value>
 
         public override int DefenseValue
         {
             get
             {
-                return 25;
+                if (skeletons == null) return 0 + 25;
+                return skeletons.DefenseValue + 25;
             }
+            
         }
 
     

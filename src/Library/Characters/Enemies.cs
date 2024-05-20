@@ -3,12 +3,12 @@ namespace RoleplayGame.Characters
     /// <summary>
     /// Clase base de los héroes; hereda de la clase Character. Es una clase abstracta, por lo tanto, no se pueden crear instancias de ella.
     /// </summary>
-    public abstract class Hero : Character
+    public abstract class  Enemies : Character
     {
         /// <summary>
         /// Puntos de victoria acumulados.
         /// </summary>
-        public int _acumulatedVP = 0;
+        protected int _acumulatedVP = 0;
 
         /// <summary>
         /// Obtiene un valor que representa los puntos de victoria del héroe.
